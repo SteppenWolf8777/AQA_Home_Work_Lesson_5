@@ -1,3 +1,3 @@
 # QA_GURU-Homeworks
 
-***Lesson_5***~~~~
+***Lesson_5***
