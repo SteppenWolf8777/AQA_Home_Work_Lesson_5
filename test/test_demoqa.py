@@ -27,14 +27,13 @@ def test_demo_aqa():
 
     browser.element('#currentAddress').type('Саратов, Усиевича 33а')
 
-    browser.element('#state').click()
-    browser.all('[id^="react-select-3-option"]').element_by(have.text('Haryana')).click()
-    browser.element('#city').click()
-    browser.all('[id^="react-select-4-option"]').element_by(have.text('Karnal')).click()
+    browser.element("#state").click()
+    browser.element("#react-select-3-input").type("Haryana").press_enter()
+
+    browser.element("#city").click()
+    browser.element("#react-select-4-input").type("Karnal").press_enter()
 
     browser.element('#submit').click()
-
-
     browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
 
     browser.all('.modal-content table tbody tr td:nth-child(2)').should(have.exact_texts(
