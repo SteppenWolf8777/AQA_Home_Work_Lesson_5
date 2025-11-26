@@ -36,7 +36,7 @@ def test_demo_aqa():
     browser.element('#submit').click()
     browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
 
-    browser.all('.modal-content table tbody tr td:nth-child(2)').should(have.exact_texts(
+    browser.all('.table td:nth-child(2)').should(have.exact_texts(
     'Alex Python',
     'alex_python_aqa@test.com',
     'Male',
