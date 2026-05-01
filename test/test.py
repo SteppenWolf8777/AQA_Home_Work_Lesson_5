@@ -11,6 +11,7 @@ browser.config.timeout = 10  # Увеличьте таймаут
 # Явное указание сервиса (опционально)
 service = Service(ChromeDriverManager().install())
 
+
 def test_demo_aqa():
-    browser.open('https://todomvc.com/')
+    browser.open("https://todomvc.com/")
     browser.quit()
