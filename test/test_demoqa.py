@@ -1,6 +1,6 @@
-from pathlib import Path
-
 from selene import browser, have
+
+from AQA_Home_Work_Lesson_5.resourses import picture_path
 
 
 def test_demo_aqa():
@@ -22,7 +22,6 @@ def test_demo_aqa():
     browser.element('label[for="hobbies-checkbox-2"]').click()
     browser.element('#subjectsInput').type('com').press_enter()
 
-    picture_path = str(Path(__file__).parent.parent.joinpath('Photo', "test.jpg").resolve())
     browser.element('#uploadPicture').set_value(picture_path)
 
     browser.element('#currentAddress').type('Саратов, Усиевича 33а')
@@ -49,5 +48,4 @@ def test_demo_aqa():
     'Haryana Karnal'
     )
     )
-
 
