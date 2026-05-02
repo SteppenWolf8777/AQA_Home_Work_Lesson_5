@@ -30,12 +30,15 @@ def test_demo_aqa():
     reg_page.user_number("9033247777")
 
     browser.element('label[for="gender-radio-1"]').click()
+    browser.element("#userNumber").type("9033247777")
+
     browser.element("#dateOfBirthInput").click()
     browser.element(".react-datepicker__month-select").click()
     browser.element('.react-datepicker__month-select option[value="11"]').click()
     browser.element(".react-datepicker__year-select").click()
     browser.element('.react-datepicker__year-select option[value="1999"]').click()
     browser.element('[aria-label="Choose Sunday, December 5th, 1999"]').click()
+
     browser.element('label[for="hobbies-checkbox-2"]').click()
     browser.element("#subjectsInput").type("com").press_enter()
 
