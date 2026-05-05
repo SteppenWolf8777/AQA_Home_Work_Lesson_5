@@ -1,6 +1,5 @@
 from selene import browser, have
-
-from AQA_Home_Work_Lesson_5 import resources
+from AQA_Home_Work_Lesson_5.resources import get_resource_path
 
 
 class RegistrationPage:
@@ -42,7 +41,7 @@ def test_demo_aqa():
     browser.element('label[for="hobbies-checkbox-2"]').click()
     browser.element("#subjectsInput").type("com").press_enter()
 
-    browser.element('#uploadPicture').set_value(resources.path('test.jpg'))
+    browser.element('#uploadPicture').set_value(get_resource_path('test.jpg'))
 
 
     browser.element("#currentAddress").type("Саратов, Усиевича 33а")
