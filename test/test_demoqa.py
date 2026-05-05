@@ -1,23 +1,7 @@
 from selene import browser, have
+
+from AQA_Home_Work_Lesson_5.pages.registation_page import RegistrationPage
 from AQA_Home_Work_Lesson_5.resources import get_resource_path
-
-
-class RegistrationPage:
-
-    def open(self):
-        browser.open("/automation-practice-form")
-
-    def fill_first_name(self, value):
-        browser.element("#firstName").type(value)
-
-    def fill_last_name(self, value):
-        browser.element("#lastName").type(value)
-
-    def user_email(self, value):
-        browser.element("#userEmail").type(value)
-
-    def user_number(self, value):
-        browser.element("#userNumber").type(value)
 
 
 def test_demo_aqa():
@@ -59,7 +43,7 @@ def test_demo_aqa():
 
     browser.all(".table td:nth-child(2)").should(
         have.exact_texts(
-            "Alex Python",
+            "Alexander Python",
             "alex_python_aqa@test.com",
             "Male",
             "9033247777",
