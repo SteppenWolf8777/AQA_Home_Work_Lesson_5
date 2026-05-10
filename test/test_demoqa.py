@@ -1,5 +1,4 @@
 from selene import browser, have
-
 from AQA_Home_Work_Lesson_5.pages.registation_page import RegistrationPage
 from AQA_Home_Work_Lesson_5.resources import get_resource_path
 
@@ -55,4 +54,6 @@ def test_demo_aqa():
             "Haryana Karnal",
         )
     )
+
+
 
