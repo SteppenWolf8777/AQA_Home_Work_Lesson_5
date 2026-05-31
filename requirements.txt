@@ -5,3 +5,5 @@ pathlib==1.0.1
 selenium==4.38.0
 flake8==7.3.0
 black==26.3.1
+allure-pytest==2.15.3
+allure-python-commons~=2.15.3
