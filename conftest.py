@@ -1,13 +1,22 @@
 import pytest
 from selene import browser
+from selenium import webdriver
 
 @pytest.fixture(scope="function", autouse=True)
 def browser_setup():
+    # Настройка конфигурации браузера
     browser.config.driver_name = "chrome"
     browser.config.base_url = "https://demoqa.com"
-    browser.config.window_width = 1920
-    browser.config.window_height = 1080
+    browser.config.window_size = (1920, 1080)
     browser.config.timeout = 6
+    browser.config.hold_browser_open = False  # Автоматически закрывать браузер после теста
 
-    yield
-    browser.quit()
+    try:
+        yield
+    except Exception as e:
+        # Логирование ошибок (опционально)
+        print(f"Тест завершился с ошибкой: {e}")
+        raise
+    finally:
+        # Гарантированное закрытие браузера даже при ошибках
+        browser.quit()
